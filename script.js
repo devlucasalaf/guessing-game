@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     let guessesAttempts = 1;
     let randomNumber = Math.floor(Math.random() * 100) + 1;
-    let isRight = false;  
+    let isRight = false;
+
+    console.log(randomNumber);
 
     var hiddenContent = document.querySelector('.hidden_content');
-    
+
     var tipTextLow = 'Last guess was too low!';
     var tipTextHigh = 'Last guess was too high!';
     var tipTextHolder = document.querySelector('.guess-tip_text');
