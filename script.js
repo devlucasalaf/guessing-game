@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let guessesAttempts = 1;
     let randomNumber = Math.floor(Math.random() * 100) + 1;
-    let isRight = false;
-
-    console.log(randomNumber);
+    let isRight = false;  
 
     var hiddenContent = document.querySelector('.hidden_content');
 
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         hiddenContent.classList.remove('hide');
         
-        isRight = inputValue === randomNumber;
+        isRight = Number(inputValue) === randomNumber;      
 
         previousGuesses = previousGuesses + inputValue + ' ';    
         previousGuessesHolder.textContent = previousGuesses;   
