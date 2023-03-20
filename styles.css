@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.guessing-game_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 24px;
+}
+
+.content {
+    max-width: 768px;
+}
+
+.title {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 32px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.guess-input_wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.guess-input_wrapper .guess_label {
+    margin-right: 16px;
+}
+
+.guess-input_wrapper .guess_input {
+    flex: 1;
+    height: 40px;
+    max-height: 40px;
+    padding: 16px;   
+    outline: none;
+    border: 0;
+    font-size: 18px;   
+    width: 100%;
+    margin: 8px 0;
+}
+
+.guess_input:read-only {
+    opacity: 0.2;
+}
+
+.guess-input_wrapper .submit_button {
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: 700;
+    border: 0;
+    outline: none;
+    min-width: 120px;
+    height: 40px;   
+    transition: 0.4s ease;
+    width: 100%;   
+}
+
+.guess-input_wrapper .submit_button:hover {
+    opacity: 0.6;
+}
+
+.submit_button:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+.hide {
+    display: none;
+}
+
+.error .guess_alert {
+    background-color: red;    
+}
+
+.guessed .guess_alert {
+    background-color: green;
+}
+
+.guessed .restart-game_btn {
+    display: block;
+}
+
+.guessed .guess-tip_text {
+    display: none;
+}
+
+.gameover .guess-tip_text {
+    display: none;
+}
+
+.gameover .restart-game_btn {
+    display: block;
+}
+
+.previous-guesses_wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.previous-guesses_label {
+    margin-right: 16px;
+}
+
+.guess_alert {
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-weight: 600;
+    color: white;
+    margin: 24px 0;
+}
+
+.restart-game_btn {
+    display: none;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: 700;
+    border: 0;
+    outline: none;
+    padding: 8px 16px;   
+    height: 40px;
+    border-radius: 8px;
+    transition: 0.4s ease;    
+}
+
+.restart-game_btn:hover {
+    opacity: 0.6;
+}
+
+@media(min-width: 768px) {
+    .guess-input_wrapper .submit_button {
+        width: initial;              
+        border-radius: 0 8px 8px 0;
+    }
+
+    .guess-input_wrapper {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .guess-input_wrapper .guess_input {
+        width: initial;
+        border-radius: 8px 0 0 8px;
+        margin: 0;
+    }
+}

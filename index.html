@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="guessing-game_section">
+        <div class="content">
+            <h1 class="title">Number Guessing Game</h1>
+            <p class="text">We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+            <form class="guess-input_wrapper">
+                <label class="guess_label">Enter a guess:</label>               
+                <input type="number" name="guess_input" id="guess_input" class="guess_input">
+                <button type="submit" class="submit_button">Submit</button>                           
+            </form>
+            <div class="hidden_content hide">
+                <div class="previous-guesses_wrapper">
+                    <p class="previous-guesses_label">Previous guesses:</p>
+                    <p class="previous-guesses"></p>                
+                </div>
+                <div class="guess_alert">
+                    <p class="alert_text"></p>
+                </div>
+                <p class="guess-tip_text"></p>
+                <button class="restart-game_btn">Start a new game</button>
+            </div>            
+        </div>
+    </section>    
+    <script src="script.js" defer></script>
+</body>
+</html>
